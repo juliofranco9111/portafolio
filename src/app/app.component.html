@@ -1,13 +1,17 @@
-<div class="main-cont">
+<div class="main-cont animate__animated animate__fadeIn" (window:scroll)="onWindowScroll($event)">
     <div class="container d-flex">
+        <app-logo></app-logo>
         <app-navbar></app-navbar>
     </div>
+    <app-nav-button></app-nav-button>
+    <br>
+    <app-nav-bar-mobile *ngIf="navService.isShow"></app-nav-bar-mobile>
 
     <div class="container">
         <router-outlet></router-outlet>
         
     </div>
 
-
+    <app-up-button *ngIf="showUpButton"></app-up-button>
 
 </div>

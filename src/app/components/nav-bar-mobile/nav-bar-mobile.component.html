@@ -1,44 +1,24 @@
-
-    <div (click)="open()" id="burguer" [class.open]="isOpen" class="menu-burguer">
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-    </div>
-    
-    <br>
-        
-            <nav id="mini-nav" *ngIf="isOpen">
-                <ul class="navbar-mobile">
-                    <li class="nav-item" routerLinkActive="active">
-                        <a click="close()" 
-                        routerLink="acerca">
-                        acerca
-                    </a>
-                </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a click="close()" 
-                    routerLink="habilidades">
-                    habilidades
-                </a>
-            </li>
-            <li class="nav-item" routerLinkActive="active">
-                <a click="close()" 
-                        routerLink="proyectos">
-                        proyectos
-                    </a>
-                </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a click="close()" 
-                    routerLink="contacto">
-                    contacto
-                </a>
-            </li>
-        </ul>
-        
-    </nav>
-    
-    
-    
-    
-    
-    
+<nav id="mini-nav" class="animate__animated animate__fadeIn">
+    <ul class="navbar-mobile">
+        <li class="nav-item-mini" routerLinkActive="active-mini">
+            <a routerLink="acerca">
+                acerca
+            </a>
+        </li>
+        <li class="nav-item-mini" routerLinkActive="active-mini">
+            <a routerLink="habilidades">
+                habilidades
+            </a>
+        </li>
+        <li class="nav-item-mini" routerLinkActive="active-mini">
+            <a routerLink="proyectos">
+                proyectos
+            </a>
+        </li>
+        <li class="nav-item-mini" routerLinkActive="active-mini">
+            <a routerLink="contacto">
+                contacto
+            </a>
+        </li>
+    </ul>
+</nav>

@@ -9,6 +9,10 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { RoutingModule } from './routing.module';
 import { NavBarMobileComponent } from './components/nav-bar-mobile/nav-bar-mobile.component';
+import { NavButtonComponent } from './components/nav-button/nav-button.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { UpButtonComponent } from './components/up-button/up-button.component';
+import { SimpleSmoothScrollModule } from 'ng2-simple-smooth-scroll';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,15 @@ import { NavBarMobileComponent } from './components/nav-bar-mobile/nav-bar-mobil
     WorksComponent,
     SkillsComponent,
     ContactComponent,
-    NavBarMobileComponent
+    NavBarMobileComponent,
+    NavButtonComponent,
+    LogoComponent,
+    UpButtonComponent
   ],
   imports: [
     BrowserModule,
-    RoutingModule
+    RoutingModule,
+    SimpleSmoothScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

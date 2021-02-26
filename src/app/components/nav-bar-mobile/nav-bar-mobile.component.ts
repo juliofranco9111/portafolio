@@ -7,25 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarMobileComponent implements OnInit {
 
-  public isOpen = false;
-
+  
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}  
 
-  open(){
-    if(!this.isOpen){
-      this.isOpen = true;
-    }else{
-      this.isOpen = false;
-    }
-
-    
-  }
-
-  close(){
-    this.isOpen = false;
-  }
+ 
 
 }
