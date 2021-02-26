@@ -7,7 +7,7 @@ import { WorksComponent } from './components/works/works.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo:'acerca' },
+  { path: '', component: AboutComponent },
   { path: 'acerca', component: AboutComponent },
   { path: 'proyectos', component: WorksComponent  },
   { path: 'habilidades', component: SkillsComponent },

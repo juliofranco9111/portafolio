@@ -101,7 +101,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', redirectTo: 'acerca' },
+    { path: '', component: _components_about_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"] },
     { path: 'acerca', component: _components_about_about_component__WEBPACK_IMPORTED_MODULE_2__["AboutComponent"] },
     { path: 'proyectos', component: _components_works_works_component__WEBPACK_IMPORTED_MODULE_5__["WorksComponent"] },
     { path: 'habilidades', component: _components_skills_skills_component__WEBPACK_IMPORTED_MODULE_3__["SkillsComponent"] },
