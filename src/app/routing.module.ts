@@ -7,17 +7,17 @@ import { WorksComponent } from './components/works/works.component';
 
 
 const routes: Routes = [
-  { path: '', component: AboutComponent },
+  { path: '', redirectTo:'acerca' },
   { path: 'acerca', component: AboutComponent },
   { path: 'proyectos', component: WorksComponent  },
   { path: 'habilidades', component: SkillsComponent },
   { path: 'contacto', component: ContactComponent },
-  { path: '**', redirectTo:'about' },
+  { path: '**', redirectTo:'acerca' },
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{useHash:true})],
   exports: [RouterModule]
 })
 export class RoutingModule {}
