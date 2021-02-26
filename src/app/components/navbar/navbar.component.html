@@ -1,14 +1,13 @@
-<div class="row d-flex">
-    <!-- <div class="col green">a</div>
-    <div class="col red">a</div>
-    <div class="col blue">a</div>
-    <div class="col green"></div>
-    <div class="col red">s</div>
-    <div class="col blue">s</div> -->
-    <div id="logo">
+<div>    
+    <div class="col" id="logo">
         JF
     </div>
-    <nav class="col-9 ml-5">
+    <div>
+        <app-nav-bar-mobile></app-nav-bar-mobile>
+    </div>
+    
+    
+    <nav id="nav-large" class="col-9 ml-5">
         <ul class="d-flex">
             <li class="nav-item" routerLinkActive="active">
                 <a routerLink="acerca">
@@ -32,4 +31,8 @@
             </li>
         </ul>
     </nav>
+
+    
+
+    
 </div>
