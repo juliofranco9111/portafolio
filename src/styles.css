@@ -4,7 +4,7 @@
 	--secondary: #f7f1e3;
 	--primary: #f7f1e3;
 	--bg-color: #2c3e50;
-	--secondary2: #34495e;
+	--secondary2: #3b5166;
 	--third: #f39c12;
 }
 
@@ -93,7 +93,7 @@ a {
 	vertical-align: middle;
 	font-family: "serif";
 	font-weight: 800;
-	border-radius: 0px 0px 8px 8px;
+	border-radius: 8px 8px 8px 8px;
 	font-size: 40px;
 	line-height: 80px;
 	width: 65px;
@@ -572,24 +572,7 @@ strong {
 
 /* FIN NAVMOBILE*/
 
-/* UP BUTTON */
 
-	.up-button{
-		position: fixed;
-		z-index: 3;
-		width: 60px;
-		height: 60px;
-		background-color: #f7f1e3;
-		color: var(--third);
-		font-size: 2.3rem;
-		border-radius: 60px;
-		outline-style: none;
-		border: none;
-		bottom: 40px;
-		right: 40px;
-	}
-
-/* END UP BUTTON */
 
 /* MEDIAQUERIES */
 @media (max-width: 767px) {

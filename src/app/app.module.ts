@@ -11,8 +11,7 @@ import { RoutingModule } from './routing.module';
 import { NavBarMobileComponent } from './components/nav-bar-mobile/nav-bar-mobile.component';
 import { NavButtonComponent } from './components/nav-button/nav-button.component';
 import { LogoComponent } from './components/logo/logo.component';
-import { UpButtonComponent } from './components/up-button/up-button.component';
-import { SimpleSmoothScrollModule } from 'ng2-simple-smooth-scroll';
+import { NgxScrollTopModule } from 'ngx-scrolltop';
 
 @NgModule({
   declarations: [
@@ -25,12 +24,11 @@ import { SimpleSmoothScrollModule } from 'ng2-simple-smooth-scroll';
     NavBarMobileComponent,
     NavButtonComponent,
     LogoComponent,
-    UpButtonComponent
   ],
   imports: [
     BrowserModule,
     RoutingModule,
-    SimpleSmoothScrollModule
+    NgxScrollTopModule
   ],
   providers: [],
   bootstrap: [AppComponent]

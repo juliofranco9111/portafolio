@@ -8,22 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public showUpButton = false;
-
   constructor(public navService: DisplayNavService){
     
   }
 
-  
-  onWindowScroll({srcElement}){
-    const position = srcElement.defaultView.scrollY;
-    
-    if(position >= 500){
-      this.showUpButton = true;
-    }else{
-      this.showUpButton = false;
-    }
-  }
+
 
 
 
