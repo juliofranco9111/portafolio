@@ -1,5 +1,5 @@
 import { DisplayNavService } from './../../services/display-nav.service';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-nav-button',
@@ -7,26 +7,21 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   styles: [
   ]
 })
-export class NavButtonComponent implements OnInit {
+export class NavButtonComponent {
 
- 
-  public isOpen = false;
- 
-
-  constructor( private navService: DisplayNavService) { }
-
-  ngOnInit(): void {
-  }
-
+  constructor( public navService: DisplayNavService) { }
+  
   open(){
+
+     
     
-    if(!this.isOpen){
-      this.isOpen = true;
+    if(!this.navService.isOpen){
+      this.navService.isOpen = true;
       this.navService.isShow = true;
 
     }else{
-      this.isOpen = false;
-      this.navService.isShow = false;
+      this.navService.isOpen = false;
+      this.navService.isShow = false; 
     }
     
   }

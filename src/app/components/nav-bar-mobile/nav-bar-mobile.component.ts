@@ -1,16 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { DisplayNavService } from './../../services/display-nav.service';
 
 @Component({
   selector: 'app-nav-bar-mobile',
   templateUrl: './nav-bar-mobile.component.html',
   styleUrls: ['./nav-bar-mobile.component.css']
 })
-export class NavBarMobileComponent implements OnInit {
+export class NavBarMobileComponent {
 
   
-  constructor() { }
+  constructor( private navService: DisplayNavService) { }
 
-  ngOnInit(): void {}  
+  closeNav(){
+    this.navService.isOpen = false;
+    this.navService.isShow = false;
+
+  }
 
  
 

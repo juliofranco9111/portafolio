@@ -4,35 +4,56 @@
     Contáctame
 </h1>
 
-<diV class="row pb-5 animate__animated animate__fadeIn">
+<diV class="row pb-5 animate__animated animate__fadeIn contact">
     <div class="col">
 
         <section class="skills">
-            <div class="form-item">
-                <input type="text" placeholder="&nbsp;">
-                <label for="example" data-label="Nombre"></label>
-            </div>
+            <form [formGroup]="contactForm">
 
-            <div class="form-item">
-                <input type="email" placeholder="&nbsp;">
-                <label for="example" data-label="Correo"></label>
-            </div>
-
-            <div class="form-item">
-                <input type="text" placeholder="&nbsp;">
-                <label for="example" data-label="Telefono (opcional)"></label>
-            </div>
-
-            <div class="form-item">
-                <input type="text" id="example" placeholder="&nbsp;">
-                <label for="example" data-label="Mensaje"></label>
-            </div>
-
-            <div class="btn mb-5">
-                <div class="btn-send">
-                    Enviar
+                <div class="form-item">
+                    <input type="text" placeholder="&nbsp;" formControlName="name">
+                    <label for="example" data-label="Nombre"></label>
                 </div>
-            </div>
+                <div class="validation animate__animated animate__fadeIn" *ngIf="notValid('name')">
+                    *El nombre es necesario
+                </div>
+                
+                <div class="form-item">
+                    <input type="email" placeholder="&nbsp;" formControlName="email">
+                    <label for="example" data-label="Correo"></label>
+                </div>
+                <div class="validation animate__animated animate__fadeIn" *ngIf="notValid('email')">
+                    *El correo es necesario y debe ser de tipo: ejemplo@correo.com
+                </div>
+                
+                <div class="form-item">
+                    <input type="text" placeholder="&nbsp;" formControlName="phone">
+                    <label for="example" data-label="Telefono (opcional)"></label>
+                </div>
+                
+                <div class="form-item">
+                    <input type="text" id="example" placeholder="&nbsp;" formControlName="msg">
+                    <label for="example" data-label="Mensaje"></label>
+                </div>
+                <div class="validation animate__animated animate__fadeIn" *ngIf="notValid('email')">
+                    *Déjame un mensaje
+                </div>
+                
+                <div class="btn mb-5 animate__animated animate__fadeIn" (click)="submit()">
+                    <div *ngIf="loading" class="btn-send animate__animated animate__fadeIn">
+                        <i class="far fa-spinner fa-spin"></i>
+                    </div>
+                    <div *ngIf="!loading && !sended" class="btn-send animate__animated animate__fadeIn">
+                        Enviar 
+                    </div>
+
+                    <div *ngIf="!loading && sended" class="btn-send animate__animated animate__fadeIn">
+                        Enviado
+                    </div>
+                </div>
+
+               
+            </form>
 
 
 
@@ -44,10 +65,6 @@
 
 
     <div class="col">
-
-
-
-
         <section class="skills">
 
             <div class="group">

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mensajes-portafolio": {
+      "hosting": {
+        "portfolio": [
+          "mensajes-portafolio"
+        ]
+      }
+    }
+  }
+}

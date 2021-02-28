@@ -312,7 +312,7 @@ strong {
 
 .form-item {
 	position: relative;
-	margin: 10px 0px;
+	margin: 20px 0px;
 	font-size: 20px;
 }
 
@@ -356,6 +356,12 @@ strong {
 .form-item input[type=text]:not(:placeholder-shown) ~ label:before {
 	font-size: 12px;
 	bottom: 44px;
+	color: var(--third);
+}
+
+.validation{
+	font-size: 0.9rem;
+	font-weight: 600;
 	color: var(--third);
 }
 
@@ -455,6 +461,7 @@ strong {
 .btn-send {
 	vertical-align: middle;
 	line-height: 50px;
+	
 }
 
 /* Social buttons */
@@ -574,6 +581,8 @@ strong {
 
 
 
+
+
 /* MEDIAQUERIES */
 @media (max-width: 767px) {
 	#logo {
@@ -623,14 +632,14 @@ strong {
 		top: 30px;
 		right: 10px;
 		position: absolute;
-	}
+	}	
 
 	.form-item input[type=text] {
 		width: 90%;
 		display: block;
 	}
 
-    .form-item input[type=email] {
+	.form-item input[type=email] {
 		width: 90%;
 		display: block;
 	}
@@ -647,6 +656,12 @@ strong {
         position: relative;
  
     }
+
+	.contact{
+		display: block;
+	}
+
+	
 }
 
 

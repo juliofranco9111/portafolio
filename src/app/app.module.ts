@@ -1,3 +1,4 @@
+import { environment } from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,6 +13,11 @@ import { NavBarMobileComponent } from './components/nav-bar-mobile/nav-bar-mobil
 import { NavButtonComponent } from './components/nav-button/nav-button.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
+AngularFireModule
 
 @NgModule({
   declarations: [
@@ -28,7 +34,11 @@ import { NgxScrollTopModule } from 'ngx-scrolltop';
   imports: [
     BrowserModule,
     RoutingModule,
-    NgxScrollTopModule
+    NgxScrollTopModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

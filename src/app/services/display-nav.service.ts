@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class DisplayNavService {
 
   public isShow = false;
+  public isOpen = false;
 
   constructor() {}
 
